@@ -1,0 +1,137 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+
+.curtain {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 100%;
+    height: 100%;
+    overflow: hidden;  
+    z-index: 2;
+}
+
+.curtainimg {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;  
+    cursor: pointer;
+    object-position: center bottom; 
+    z-index: 2;
+}
+
+.curtain.hovered .curtainimg {
+    transition: transform 0.2s ease;
+    transform: translateY(-5%);
+}
+
+.curtain.clicked .curtainimg {
+    transition: transform 1s ease;
+    transform: translateY(-100%);
+}
+
+.lamp{
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 100px; 
+    height: 300px; 
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.lampimg {
+    width: 100%; 
+    height:100%; 
+    object-fit: cover;  
+    object-position: center top; 
+    cursor: pointer;
+    z-index: 1;
+}
+
+.light{
+    top:0px;
+    position: absolute;
+    width:85px;
+    height:85px;
+    border-left:400px solid transparent;
+    border-right:400px solid transparent;
+    border-bottom:500px solid yellow;
+    opacity: 0.5;
+    object-position: center top;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    pointer-events: none; 
+    opacity: 0; 
+    transition: opacity 0.2s ease-in-out; 
+}
+
+.light.show {
+    display: block; 
+    opacity: 0.5; 
+}
+
+.girlimg{
+    display:none;
+    position: absolute;
+    height: 200px;
+    width: 250px;
+    top:400px;
+    left: 500px;
+}
+.hatimg{
+    display: none;
+    position: absolute;
+    height: 105px;
+    width: 115px;
+    top:450px;
+    transform: rotate(180deg);
+    left: 800px;
+    transition: transform 0.5s;
+    cursor: pointer;
+    z-index: 2;
+}
+.rabbitimg{
+    display: none;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top:390px;
+    left: 830px;
+    transition: transform 0.5s; 
+    cursor: pointer;
+    z-index: 1;
+}
+.birdimg{
+    display: none;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top:450px;
+    left: 830px;
+    transition: transform 0.5s; 
+    cursor: pointer;
+    z-index: 1;
+}
+
+.girlimg.show {
+    display: block;
+}
+.hatimg.show {
+    display: block; 
+}
+.rabbitimg.show {
+    display: block; 
+}
+.birdimg.show {
+    display: block; 
+}
